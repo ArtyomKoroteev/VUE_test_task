@@ -1,6 +1,6 @@
 export default {
   async loadReports({ commit }) {
-    await fetch('https://run.mocky.io/v3/ea0aca4b-66c7-43ad-8e30-6b856f29a945', {
+    await fetch('https://run.mocky.io/v3/338deb38-7bcd-43c1-8b32-bbf60851af5d', {
       method: 'GET',
     })
       .then((response) => {

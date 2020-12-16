@@ -78,8 +78,14 @@
       }
     }
 
-    &--time {
+    &--time,
+    &--device {
+      display: block;
       font-weight: 600;
+    }
+
+    &--device {
+      text-transform: uppercase;
     }
   }
 }

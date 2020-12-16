@@ -1,6 +1,7 @@
 <template>
   <div class="report-container">
     <div class="report-card" v-for="(element) in reports" :key="element.id">
+      <span class="report-card--device">{{element.device}}</span>
       <span class="report-card--time">{{element.time}}</span>
       <table class="report-card--table">
         <thead class="report-card--table-head">
