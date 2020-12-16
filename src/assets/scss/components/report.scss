@@ -4,13 +4,34 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px 28px;
+
+    @media (max-width: 767px) {
+      margin: 0 0 15px;
+    }
   }
 
   &-card {
     max-width: 25%;
     flex: 0 0 25%;
-    padding: 15px;
     margin: 0 0 15px;
+    padding: 0 15px;
+    overflow: auto;
+
+    @media (max-width: 1560px) {
+      max-width: 33.33%;
+      flex: 0 0 33.33%;
+    }
+
+    @media (max-width: 1281px) {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+
+    @media (max-width: 767px) {
+      max-width: 100%;
+      flex: 0 0 100%;
+      padding: 0;
+    }
 
     &--row {
       display: flex;
@@ -21,13 +42,14 @@
     }
 
     &--table {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      border: 1px solid #bcbcbc;
       border-collapse: collapse;
       background: #fff;
       overflow: hidden;
-      width: 100%;
-      margin: 0 auto;
-      position: relative;
-      border: 1px solid #bcbcbc;
+      white-space: nowrap;
 
       &-head > tr {
         height: 30px;
@@ -36,8 +58,8 @@
 
       &-body > tr {
         font-size: 12px;
-        color: gray;
         line-height: 1.2;
+        color: gray;
       }
 
       &-body tr:nth-child(even) {
@@ -50,9 +72,9 @@
 
       th {
         font-size: 14px;
-        color: #fff;
         line-height: 1.2;
         text-align: left;
+        color: #fff;
       }
     }
 
